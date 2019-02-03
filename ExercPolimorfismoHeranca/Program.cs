@@ -38,7 +38,7 @@ namespace ExercPolimorfismoHeranca
                     DateTime manufacturedDate = DateTime.Parse(Console.ReadLine());
                     products.Add(new UsedProduct(name, price, manufacturedDate));
                 }
-                else if (usedOrImported == 'c')
+                else
                 {
                     products.Add(new Product(name, price));
                 }                                                     

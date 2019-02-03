@@ -1,14 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Globalization;
-using System.Text;
+﻿using System.Globalization;
 
 namespace ExercPolimorfismoHeranca.Entities
 {
     class ImportedProduct : Product
     {
         public double CustomFree { get; set; }
-        private double _totalPrice = 0.0;
         
         public ImportedProduct()
         {
@@ -21,7 +17,7 @@ namespace ExercPolimorfismoHeranca.Entities
 
         public override string PriceTag()
         {                       
-            return Name + "$" + TotalPrice() + "(Customs fee: $" + CustomFree.ToString("F2", CultureInfo.InvariantCulture) + ")";
+            return Name + " $ " + TotalPrice().ToString("F2", CultureInfo.InvariantCulture) + " (Customs fee: $" + CustomFree.ToString("F2", CultureInfo.InvariantCulture) + ")";
         }
 
         public double TotalPrice()

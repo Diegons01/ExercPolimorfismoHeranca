@@ -1,5 +1,5 @@
 ﻿using System.Globalization;
- 
+
 namespace ExercPolimorfismoHeranca.Entities
 {
     class Product
@@ -19,7 +19,8 @@ namespace ExercPolimorfismoHeranca.Entities
 
         public virtual string PriceTag()
         {
-            return Price.ToString("F2", CultureInfo.InvariantCulture);
+            //Notebook $ 1100.00
+            return Name + " $ " + Price.ToString("F2", CultureInfo.InvariantCulture);
         }
 
     }

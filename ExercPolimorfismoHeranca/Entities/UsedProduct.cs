@@ -1,6 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
+using System.Globalization;
 
 namespace ExercPolimorfismoHeranca.Entities
 {
@@ -20,7 +19,7 @@ namespace ExercPolimorfismoHeranca.Entities
         public override string PriceTag()
         {
             //Iphone (used) $ 400.00 (Manufacture date: 15/03/2017)
-            return  Name + "(used) $" + base.PriceTag() + "(Manufacute date: " + ManafacturedDate.ToString("ddMMyyy");
+            return  Name + " (used) $ " + Price.ToString("F2", CultureInfo.InvariantCulture) + " (Manufacute date: " + ManafacturedDate.ToString("dd/MM/yyy");
         }
     }
 }
